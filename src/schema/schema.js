@@ -7,7 +7,6 @@ const typeDefs = `
     }
 
     type PointProps {
-        location: String!
         lat: Float
         lon: Float
     }
@@ -18,13 +17,13 @@ const typeDefs = `
         properties: PointProps
     }
     
-    type FeatureCollection {
+    type LineString {
         type: String!
         features: [PointObject]
     }
 
     type Query {
-        trail_coordinates: FeatureCollection
+        trail_coordinates: LineString
     }
 `
 

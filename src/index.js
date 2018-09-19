@@ -1,23 +1,24 @@
 const express = require('express')
 const graphql = require('express-graphql')
+const cors = require('cors')
 const graphqlTools = require('graphql-tools')
 const executableSchema = graphqlTools.makeExecutableSchema
 
 const typeDefs = require('./schema/schema')
-const resolvers = require('./resolvers/trail_coordinates')
+const trail_coordinates = require('./resolvers/trail_coordinates')
 
 
 const schema = executableSchema({
     typeDefs,
-    resolvers
+    resolvers: trail_coordinates
 })
 
 const app = express()
-
-console.log(resolvers)
+app.use(cors())
 
 app.use('/graphql', graphql({
-    schema
+    schema,
+    graphiql: true
 }))
 
 const server = app.listen(4000, () => {

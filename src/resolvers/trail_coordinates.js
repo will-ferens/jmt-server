@@ -26,9 +26,6 @@ const resolvers = {
             },
         },
         PointProps: {
-            location(item) {
-                return item.location
-            },
             lat(item) {
                 return item.latitude
             },
@@ -47,9 +44,9 @@ const resolvers = {
                 return item
             },
         },
-        FeatureCollection: {
+        LineString: {
             type() {
-                return 'FeatureCollection'
+                return 'LineString'
             },
             features(data) {
                 return data
