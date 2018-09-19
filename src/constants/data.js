@@ -16,8 +16,9 @@ const coordinates = [
     },
     {
         location: 'Nevada Falls',
-        latitude: 3.7775770290559003,
-        longitude: -119.00943591200739
+        latitude: 37.7248,
+        longitude: -119.5333,
+        pictureURL: "https://farm5.staticflickr.com/4594/38236609485_4dfdcd1593_k.jpg" 
     },
     {
         location: 'Half dome Trailn Junction',

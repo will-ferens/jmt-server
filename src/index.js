@@ -6,11 +6,14 @@ const executableSchema = graphqlTools.makeExecutableSchema
 
 const typeDefs = require('./schema/schema')
 const trail_coordinates = require('./resolvers/trail_coordinates')
+const featured_points = require('./resolvers/point_coordinates')
 
+const resolvers = [trail_coordinates, featured_points]
 
 const schema = executableSchema({
     typeDefs,
-    resolvers: trail_coordinates
+    resolvers: resolvers
+    
 })
 
 const app = express()
