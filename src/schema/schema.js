@@ -9,6 +9,8 @@ const typeDefs = `
     type PointProps {
         lat: Float
         lon: Float
+        elevation: Int
+        mile: Float
         location: String
         pictureURL: String
     }

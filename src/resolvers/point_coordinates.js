@@ -37,6 +37,12 @@ const resolvers = {
             },
             pictureURL(item) {
                 return item.pictureURL
+            },
+            mile(item) {
+                return item.mile
+            },
+            elevation(item) {
+                return item.elevation
             }
         },
         PointObject: {
