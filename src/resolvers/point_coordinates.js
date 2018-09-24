@@ -43,6 +43,9 @@ const resolvers = {
             },
             elevation(item) {
                 return item.elevation
+            },
+            description(item) {
+                return item.description
             }
         },
         PointObject: {

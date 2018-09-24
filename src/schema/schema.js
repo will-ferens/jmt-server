@@ -11,6 +11,7 @@ const typeDefs = `
         lon: Float
         elevation: Int
         mile: Float
+        description: String
         location: String
         pictureURL: String
     }
